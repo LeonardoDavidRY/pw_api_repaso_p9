@@ -27,7 +27,7 @@ public class EstudianteResource {
     private UriInfo uriInfo;
 
     @GET
-    @Path("/todos")
+    @Path("/")
     @Produces(MediaType.APPLICATION_JSON)
     public Response obtenerEstudiantes() {
         List<EstudianteRepresentation> estudiantes = estudianteService.buscarTodos();
@@ -44,7 +44,7 @@ public class EstudianteResource {
     }
 
     @POST
-    @Path("/guardar")
+    @Path("/")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("admin")
